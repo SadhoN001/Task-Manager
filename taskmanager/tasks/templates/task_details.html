@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Task Detail{% endblock %}
+
+{% block content %}
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <p class="text-muted">{{ task.due_date }}</p>
+        <p><small>Created: {{ task.created_at }} | Updated: {{ task.updated_at }}</small></p>
+
+        {% if task.status == 'Completed' %}
+            <span class="badge bg-success">Completed</span>
+        {% elif task.status == 'Pending' %}
+            <span class="badge bg-warning text-dark">Pending</span>
+        {% else %}
+            <span class="badge bg-info text-white">In Progress</span>
+        {% endif %}
+
+        <hr>
+
+        <a href="{% url 'view_task_list' %}" class="btn btn-dark">Back</a>
+        <a href="{% url 'delete_task' task.id %}" class="btn btn-danger float-end">Delete</a>
+        
+                                                                      {% comment %} kaj baki  {% endcomment %}
+        {% if task.status != 'complete' %}
+             <a href="{% url 'mark_complete' task.id %}" class="btn btn-success btn-sm">Mark as Complate</a>
+        {% endif %}
+            
+
+    </div>
+</div>
+
+{% endblock %}
+

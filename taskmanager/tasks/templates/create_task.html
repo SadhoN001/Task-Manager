@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    {% if form.instance.pk %}Edit Task{% else %}Create Task{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow p-4 mt-4">
+    <h3 class="text-primary mb-4">
+        {% if form.instance.pk %}
+            <i class="bi bi-pencil-square"></i> Edit Task
+        {% else %}
+            <i class="bi bi-plus-circle"></i> Create New Task
+        {% endif %}
+    </h3>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- {{ form|crispy }} -->
+
+        {{ form.title|as_crispy_field }}
+        {{ form.description|as_crispy_field }}
+        {{ form.status|as_crispy_field }}
+        {{ form.priority|as_crispy_field }}
+
+        <!-- Due Date - Custom -->
+        <div class="mb-3">
+            <label for="id_due_date" class="form-label">Due Date</label>
+            <input type="date" name="due_date" class="form-control" id="id_due_date" 
+                   value="{{ form.due_date.value|default_if_none:'' }}">
+            {% if form.due_date.errors %}
+                <div class="text-danger mt-1">{{ form.due_date.errors }}</div>
+            {% endif %}
+        </div>  
+        
+        <!-- Buttons -->
+        <button type="submit" class="btn btn-primary mt-2">
+            <i class="bi bi-check-circle"></i> Save
+        </button>
+        <a href="{% url 'view_task_list' %}" class="btn btn-secondary mt-2">
+            <i class="bi bi-x-circle"></i> Cancel
+        </a>
+    </form>
+</div>
+
+{% endblock %}
