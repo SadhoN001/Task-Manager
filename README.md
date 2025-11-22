@@ -207,29 +207,33 @@ Use the filter panel to narrow down your task list:
 
 ## 📸 Screenshots
 
+### 1. Registration
+![register](Screenshort/registerPage.png)
+*New user registration with email verification*
+
+### 1. Login
+![login](Screenshort/loginPage.png)
+*Secure user authentication with username and password*
+
 ### 1. Task List Dashboard
-![Task List](screenshots/task_list.png)
+![tasklist](Screenshort/tasklist.png)
 *Main dashboard displaying all tasks with filtering and search options*
 
-### 2. Task Filters in Action
-![Filters](screenshots/filters.png)
-*Filter panel showing status, priority, and due date filtering options*
+### 1. Task Create 
+![create task](Screenshort/create_task.png)
+*Intuitive form to create new tasks with title, description, priority, status, and due date*
 
-### 3. Search Functionality
-![Search](screenshots/search_results.png)
-*Search results displaying tasks matching the search query*
+### 1. Task Details 
+![view task](Screenshort/view_task.png)
+*Detailed task information showing complete description, status, priority, dates, and available actions*
 
-### 4. Task Statistics
-![Statistics](screenshots/statistics.png)
-*Overview showing completed tasks vs pending tasks count*
+### 1. Task Edit 
+![edit task](Screenshort/edit_task.png)
+*Update existing task details including title, description, status, priority, and due date*
 
-### 5. Create New Task
-![Create Task](screenshots/create_task.png)
-*Form interface for creating a new task*
-
-### 6. Task Detail View
-![Task Detail](screenshots/task_detail.png)
-*Detailed view of a single task with edit and delete options*
+### 1. Task Profile
+![profile page](Screenshort/profilePage.png)
+*Manage personal information, avatar, bio, phone, location, and website details*
 
 ---
 
@@ -365,12 +369,6 @@ Contact
 -
 If you want me to update the README further or incorporate screenshots and example data, tell me what to include and I'll update the file.
 
-### Screenshort
 
-![register](Screenshort/registerPage.png)
-![login](Screenshort/loginPage.png)
-![tasklist](Screenshort/tasklist.png)
-![create task](Screenshort/create_task.png)
-![view task](Screenshort/view_task.png)
-![edit task](Screenshort/edit_task.png)
-![profile page](Screenshort/profilePage.png)
+
+
